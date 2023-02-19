@@ -1,14 +1,6 @@
 import React from 'react';
 import LineGradient from '../components/LineGradient';
 import { motion } from 'framer-motion';
-import project1 from "../assets/project-1.jpg"
-import project2 from "../assets/project-2.jpg"
-import project3 from "../assets/project-3.jpg"
-import project4 from "../assets/project-4.jpg"
-import project5 from "../assets/project-5.jpg"
-import project6 from "../assets/project-6.jpg"
-
-
 
 const container = {
   hidden:{},
@@ -23,7 +15,7 @@ const projectVariant = {
 }
 
 
-const Project = ({title, subtitle, github, image}) => {
+const Project = ({title, subtitle, github}) => {
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 
   transition duration-500 bg-grey z-30 flex flex-col justify-center 
   items-center text-center p-16 text-deep-blue`;
@@ -36,7 +28,7 @@ const Project = ({title, subtitle, github, image}) => {
         <p className="mt-7">{subtitle}</p>
         <p><a href={github} target="_blank" rel="noreferrer">GitHub Code</a> </p>
       </div>
-      <img src={image} alt={projectTitle}/>
+      <img src={(`/assets/${projectTitle}.JPG`)} alt={projectTitle}/>
     </motion.div>
   )
 }
@@ -78,13 +70,13 @@ const Projects = () => {
             viewport={{once: true, amount:0.5}}
             variants={container}>
               {/* row 1 */}
-              <Project img={project1} title="Project 1" subtitle={"MERN (Mongoose Express.JS React Node.JS) Admin Dashboard."} github="https://github.com/chanaram1/fullstack-admin"/>
-              <Project img={project2}title="Project 2" subtitle={"Fully functioning Youtube Clone created with React."} github="https://github.com/chanaram1/youtube_clone"/>
-              <Project img={project3} title="Project 3" subtitle={"Play rock, paper, scissors against AI with the help of HTML, CSS and JavaScript."} github="https://github.com/chanaram1/RPS"/>
+              <Project title="Project 1" subtitle={"MERN (Mongoose Express.JS React Node.JS) Admin Dashboard."} github="https://github.com/chanaram1/fullstack-admin"/>
+              <Project title="Project 2" subtitle={"Fully functioning Youtube Clone created with React."} github="https://github.com/chanaram1/youtube_clone"/>
+              <Project title="Project 3" subtitle={"Play rock, paper, scissors against AI with the help of HTML, CSS and JavaScript."} github="https://github.com/chanaram1/RPS"/>
               {/* row 2 */}
-              <Project img={project4} title="Project 4" subtitle={"Course Project: Single window bookstore application created with Java and JavaFX for OOP course."} github="https://github.com/chanaram1/Bookstore-Application" />
-              <Project img={project5} title="Project 5" subtitle={"Webscraping application that provides information on a League of Legends champion using Python."} github="https://github.com/chanaram1/LeagueofLegendsRunesBot"/>
-              <Project img={project6} title="Project 6" subtitle={"To-Do list created with HTMl, CSS and JavaScript."} github="https://github.com/chanaram1/todolist" />
+              <Project title="Project 4" subtitle={"Course Project: Single window bookstore application created with Java and JavaFX for OOP course."} github="https://github.com/chanaram1/Bookstore-Application" />
+              <Project title="Project 5" subtitle={"Webscraping application that provides information on a League of Legends champion using Python."} github="https://github.com/chanaram1/LeagueofLegendsRunesBot"/>
+              <Project title="Project 6" subtitle={"To-Do list created with HTMl, CSS and JavaScript."} github="https://github.com/chanaram1/todolist" />
           </motion.div>
         </div>
     
