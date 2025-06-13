@@ -24,11 +24,11 @@ const SocialMediaIcons = () => {
       </a>
       <a
         className="hover:opacity-50 transition duration-500"
-        href="https://docs.google.com/document/d/1vdPVWV1xzOQmv5pI23Qu_5AKgzTsDRP-ZoxyKbFDSg8/edit?usp=sharing"
+        href="/assets/Resume (4).pdf"
         target="_blank"
         rel="noreferrer"
       >
-        <img alt="resume-link" src="../assets/resume.png"/>
+        <img alt="resume" src="../assets/resume.png"/>
       </a>
     </div>
   )

@@ -3,7 +3,6 @@ import DotGroup from "./scenes/DotGroup";
 import Landing from "./scenes/Landing";
 import MySkills from "./scenes/MySkills";
 import Projects from "./scenes/Projects";
-import Contact from "./scenes/Contact";
 import Footer from "./scenes/Footer";
 import { useState, useEffect } from "react";
 import LineGradient from "./components/LineGradient"
@@ -51,7 +50,6 @@ function App() {
           </div>
           <LineGradient/>
           <div className="w-5/6 mx-auto md:h-full">
-            <Contact/>
         </div>
       <Footer/>
     </div>

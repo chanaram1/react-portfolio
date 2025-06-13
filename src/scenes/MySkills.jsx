@@ -14,34 +14,43 @@ const MySkills = () => {
           className="md:w-1/3"
           initial="hidden"
           whileInView="visible"
-          viewport={{once: true, amount:0.5}}
-          transition={{duration:0.5}}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
           variants={{
-            hidden: {opacity:0, x:-50},
-            visible: {opacity:1, x:0},
-        }}>
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        >
           <p className="font-playfair font-semibold text-4xl mb-5">
-            MY <span className="text-red">SKILLS</span>
+            WORK <span className="text-red">EXPERIENCE</span>
           </p>
-          <LineGradient width="w-1/3"/>
+          <LineGradient width="w-1/3" />
           <p className="mt-10 mb-7">
-            Here is a quick summary of my skills. I continue to practice these skills through course material, labs, and personal projects. 
+            I was fortunately able to complete three internships within my time
+            at university. Throughout my experience, I was able grow and learn
+            new things on the go as not everything that is taught in school will
+            be used at the work place. This was pivotal to be on my feet, ask
+            questions and not be afraid to seek answers from the other
+            developers.
           </p>
         </motion.div>
 
         <div className="mt-16 md:mt-0">
           {isAboveMediumScreens ? (
             <div
-            className="relative z-0 ml-20 before:absolute 
+              className="relative z-0 ml-20 before:absolute 
             before:-top-10 before:-left-10 before:w-full
             before:h-full before:border-2 before:border-blue before:z-[-1]"
-          >
-            <img alt="skills" className="z-10" src="assets/skills-image.png"/>
-          </div>
+            >
+              <img
+                alt="skills"
+                className="z-10"
+                src="assets/skills-image.png"
+              />
+            </div>
           ) : (
-            <img alt="skills" className="z-10" src="assets/skills-image.png"/>
+            <img alt="skills" className="z-10" src="assets/skills-image.png" />
           )}
-
         </div>
       </div>
       {/* skills */}
@@ -51,22 +60,26 @@ const MySkills = () => {
           className="md:w-1/3 mt-10"
           initial="hidden"
           whileInView="visible"
-          viewport={{once: true, amount:0.5}}
-          transition={{duration:0.5}}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
           variants={{
-            hidden: {opacity:0, y:50},
-            visible: {opacity:1, y:0},
-        }}
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 },
+          }}
         >
           <div className="relative h-32">
             <div className="z-10">
-              <p className="font-playfair font-semibold text-5xl">01</p>
-              <p className="font-playfair font-semibold text-3xl mt-3">Technical Skills</p>
+              <p className="font-playfair font-semibold text-5xl">BMO</p>
+              <p className="font-playfair font-semibold text-3xl mt-3">
+                Software Developer Intern
+              </p>
             </div>
-            <div className="w-1/2 md:w-3/4 h-32 bg-blue absolute right-0 top-0 z-[-1]"/>
+            <div className="w-1/2 md:w-3/4 h-32 bg-blue absolute right-0 top-0 z-[-1]" />
           </div>
           <p className="mt-5">
-            Proficient scripting languages such as JavaScript and Python. Also have database experience and knowledge with SQL, OracleDB and MongoDB. Furthermore, I enjoy the fullstack development with different technologies such as HTML, CSS and React.
+            Successfully spearheaded an initiative to enhance code reusability
+            and testing efficiency across engineering teams by transforming
+            redundant Python code into structured, shareable packages.
           </p>
         </motion.div>
         {/* soft skills*/}
@@ -74,22 +87,27 @@ const MySkills = () => {
           className="md:w-1/3 mt-10"
           initial="hidden"
           whileInView="visible"
-          viewport={{once: true, amount:0.5}}
-          transition={{delay:0.2,duration:0.5}}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
           variants={{
-            hidden: {opacity:0, y:50},
-            visible: {opacity:1, y:0},
-        }}
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 },
+          }}
         >
           <div className="relative h-32">
             <div className="z-10">
-              <p className="font-playfair font-semibold text-5xl">02</p>
-              <p className="font-playfair font-semibold text-3xl mt-3">Soft Skills</p>
+              <p className="font-playfair font-semibold text-5xl">BMO</p>
+              <p className="font-playfair font-semibold text-3xl mt-3">
+                Software Developer Intern
+              </p>
             </div>
-            <div className="w-1/2 md:w-3/4 h-32 bg-red absolute right-0 top-0 z-[-1]"/>
+            <div className="w-1/2 md:w-3/4 h-32 bg-red absolute right-0 top-0 z-[-1]" />
           </div>
           <p className="mt-5">
-            Excellent communication skills trained through work experience and school projects. Problem-solving skills by being able to breakdown big tasks into smaller components to complete efficiently and effectly. Ability to accept both good and bad feedback either because the only way to grow as a developer is to be critical.  
+            Automated and standardized documentation workflows using Sphinx and
+            Confluence Cloud API integration. This ensured real-time accuracy
+            across all product pages, significantly boosting efficiency and data
+            integrity.
           </p>
         </motion.div>
         {/* 3 */}
@@ -97,27 +115,32 @@ const MySkills = () => {
           className="md:w-1/3 mt-10"
           initial="hidden"
           whileInView="visible"
-          viewport={{once: true, amount:0.5}}
-          transition={{delay:0.4,duration:0.5}}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ delay: 0.4, duration: 0.5 }}
           variants={{
-            hidden: {opacity:0, y:50},
-            visible: {opacity:1, y:0},
-        }}
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 },
+          }}
         >
           <div className="relative h-32">
             <div className="z-10">
-              <p className="font-playfair font-semibold text-5xl">03</p>
-              <p className="font-playfair font-semibold text-3xl mt-3">Experience</p>
+              <p className="font-playfair font-semibold text-5xl">Napoleon</p>
+              <p className="font-playfair font-semibold text-3xl mt-3">
+                Software Developer Intern
+              </p>
             </div>
-            <div className="w-1/2 md:w-3/4 h-32 bg-yellow absolute right-0 top-0 z-[-1]"/>
+            <div className="w-1/2 md:w-3/4 h-32 bg-yellow absolute right-0 top-0 z-[-1]" />
           </div>
           <p className="mt-5">
-            I have been able to put these vairety of skills to use through labs, course projects and personal projects.
+            Developed a customer-facing web dashboard
+            using Python Flask, HTML, and CSS for thermostat data interaction
+            and product development. Integrated interactive temperature graphs using Matplotlib,
+            optimizing RESTful API calls to visualize complex device usage data.
           </p>
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
 
 export default MySkills
