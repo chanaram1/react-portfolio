@@ -1,6 +1,7 @@
 import SocialMediaIcons from "../components/SocialMediaIcons";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { motion } from 'framer-motion';
+import TypewriterName from "../components/TypewriterName";
 
 const Landing = ({setSelectedPage}) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
@@ -61,7 +62,7 @@ const Landing = ({setSelectedPage}) => {
             </span>
           </p>
           <p className="mt-10 mb-7 text-sm text-center md:text-start">
-            Recent computer engineering graduate from TMU (Ryerson University).
+            <TypewriterName/>
           </p>
         </motion.div>
 

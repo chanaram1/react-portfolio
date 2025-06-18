@@ -14,12 +14,21 @@ const projectVariant = {
   visible: {opacity:1, scale:1} //final value for the child
 }
 
+// Project image mapping
+const projectImages = {
+  "portfolio-tracker": "/assets/portfolio.jpg",
+  "league-of-legends-runes": "/assets/leagueoflegends.jpg",
+  "course-project:-bookstore-application": "/assets/bookstore.jpg"
+};
 
 const Project = ({title, subtitle, github}) => {
   const overlayStyles = `absolute h-full w-full opacity-0 hover:opacity-90 
   transition duration-500 bg-grey z-30 flex flex-col justify-center 
   items-center text-center p-16 text-deep-blue`;
   const projectTitle = title.split(" ").join("-").toLowerCase();
+  
+  // Get the correct image path
+  const imagePath = projectImages[projectTitle] || `/assets/${projectTitle}.jpg`;
   
   return(
     <motion.div variants={projectVariant} className="relative">
@@ -28,7 +37,7 @@ const Project = ({title, subtitle, github}) => {
         <p className="mt-7">{subtitle}</p>
         <p><a href={github} target="_blank" rel="noreferrer">GitHub Code</a> </p>
       </div>
-      <img src={(`/assets/${projectTitle}.JPG`)} alt={projectTitle}/>
+      <img src={imagePath} alt={title} className="w-full h-full object-cover"/>
     </motion.div>
   )
 }
@@ -70,13 +79,9 @@ const Projects = () => {
             viewport={{once: true, amount:0.5}}
             variants={container}>
               {/* row 1 */}
-              <Project title="Project 1" subtitle={"MERN (Mongoose Express.JS React Node.JS) Admin Dashboard."} github="https://github.com/chanaram1/fullstack-admin"/>
-              <Project title="Project 2" subtitle={"Fully functioning Youtube Clone created with React."} github="https://github.com/chanaram1/youtube_clone"/>
-              <Project title="Project 3" subtitle={"Play rock, paper, scissors against AI with the help of HTML, CSS and JavaScript."} github="https://github.com/chanaram1/RPS"/>
-              {/* row 2 */}
-              <Project title="Project 4" subtitle={"Course Project: Single window bookstore application created with Java and JavaFX for OOP course."} github="https://github.com/chanaram1/Bookstore-Application" />
-              <Project title="Project 5" subtitle={"Webscraping application that provides information on a League of Legends champion using Python."} github="https://github.com/chanaram1/LeagueofLegendsRunesBot"/>
-              <Project title="Project 6" subtitle={"To-Do list created with HTMl, CSS and JavaScript."} github="https://github.com/chanaram1/todolist" />
+              <Project title="Portfolio Tracker" github="https://github.com/chanaram1/portfolio-tracker"/>
+              <Project title="League of Legends Runes" github="https://github.com/chanaram1/LeagueofLegendsRunesBot"/>
+              <Project title="Course Project: Bookstore Application" github="https://github.com/chanaram1/Bookstore-Application" />
           </motion.div>
         </div>
     
